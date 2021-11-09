@@ -36,7 +36,7 @@ const Details = () => {
 
   useEffect(() => {
     getDetail();
-  }, []);
+  });
 
   return <Detail result={result} isLoading={isLoading} error={error} />;
 };
