@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { moviesAPI } from 'api';
@@ -96,6 +97,9 @@ const Home = () => {
 
   return (
     <>
+      <Helmet>
+        <title>웨이비</title>
+      </Helmet>
       {isLoading ? (
         <Loader />
       ) : (
