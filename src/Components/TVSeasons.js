@@ -26,6 +26,7 @@ const ContentContainer = styled.div`
   position: relative;
   z-index: 5;
   display: flex;
+  flex-wrap: wrap;
 `;
 const PosterContainer = styled.div`
   width: 180px;
