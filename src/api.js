@@ -17,6 +17,12 @@ export const moviesAPI = {
       params: {
         append_to_response: 'videos'
       }
+    }),
+  search: term =>
+    api.get('search/movie', {
+      params: {
+        query: term
+      }
     })
 };
 
@@ -29,6 +35,12 @@ export const tvsAPI = {
       params: {
         append_to_response: 'videos',
         include_video_language: 'en'
+      }
+    }),
+  search: term =>
+    api.get('search/tv', {
+      params: {
+        query: term
       }
     })
 };

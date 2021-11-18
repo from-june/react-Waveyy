@@ -36,7 +36,7 @@ const Message = styled.p`
   font-weight: 300;
 `;
 
-const ErrorMessage = text => (
+const ErrorMessage = ({ text }) => (
   <Center>
     <ErrorContainer>
       <Message>{text}</Message>

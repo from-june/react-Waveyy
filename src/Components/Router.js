@@ -5,7 +5,7 @@ import Home from 'Screens/Home';
 import Movies from 'Screens/Movies';
 import TVshows from 'Screens/TVshows';
 import Details from 'Screens/Details';
-import Search from 'Screens/Search';
+import SearchResults from 'Screens/SearchResults';
 
 const Router = () => {
   return (
@@ -17,7 +17,7 @@ const Router = () => {
         <Route path="/show" element={<TVshows />} />
         <Route path="/movie/:id" element={<Details />} />
         <Route path="/show/:id" element={<Details />} />
-        <Route path="/search" element={<Search />} />
+        <Route path="/search" element={<SearchResults />} />
       </Routes>
     </HashRouter>
   );
