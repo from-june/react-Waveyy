@@ -19,13 +19,15 @@ const Container = styled.div`
 `;
 
 const Movies = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [popular, setPopular] = useState([]);
   const [nowPlaying, setNowPlaying] = useState([]);
   const [upcoming, setUpcoming] = useState([]);
 
   const getMovies = async () => {
+    setIsLoading(true);
+
     try {
       const {
         data: { results: popular }

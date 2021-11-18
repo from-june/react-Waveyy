@@ -19,13 +19,15 @@ const Container = styled.div`
 `;
 
 const TVshows = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [popular, setPopular] = useState([]);
   const [topRated, setTopRated] = useState([]);
   const [airingToday, setAiringToday] = useState([]);
 
   const getTVshows = async () => {
+    setIsLoading(true);
+
     try {
       const {
         data: { results: popular }

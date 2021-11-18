@@ -8,12 +8,13 @@ const Details = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState([]);
 
   const getDetail = async () => {
     let result = null;
+    setIsLoading(true);
 
     try {
       const isMovie = pathname.includes('/movie');

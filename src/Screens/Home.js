@@ -71,13 +71,15 @@ const MovieLink = styled(Link)`
 `;
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const [popular, setPopular] = useState([]);
 
   const randomPic = Math.floor(Math.random() * popular.length);
 
   const getPopular = async () => {
+    setIsLoading(true);
+
     try {
       const {
         data: { results: popular }
